@@ -1,22 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+function App({ number, onIncrease, onDecrease }) {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <section>
+          <div>{number}</div>
+          <button onClick={onDecrease}>-</button>
+          <button onClick={onIncrease}>+</button>
+        </section>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          I am counter!
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );
