@@ -1,20 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
+import PostListContainer from './containers/PostListContainer';
+import CounterContainer from './containers/CounterContainer';
 
-function App({ number, onIncrease, onDecrease }) {
+function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <section>
-          <div>{number}</div>
-          <button onClick={onDecrease}>-</button>
-          <button onClick={onIncrease}>+</button>
-        </section>
+        <CounterContainer />
         <p>
           I am counter!
         </p>
       </header>
+      <PostListContainer />
     </div>
   );
 }
